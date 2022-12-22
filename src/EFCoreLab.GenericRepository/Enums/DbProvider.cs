@@ -2,7 +2,7 @@
 {
     public enum DbProvider
     {
-        Postgres,
+        Postgresql,
         MsSql,
         Redshift,
     }

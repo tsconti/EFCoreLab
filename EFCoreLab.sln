@@ -5,7 +5,11 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7A025B3A-206E-41E5-ADD2-9FD740D5FE35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreLab.GenericRepository", "src\EFCoreLab.GenericRepository\EFCoreLab.GenericRepository.csproj", "{298EB24E-B305-4362-A1C1-DA612F681440}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreLab.GenericRepository", "src\EFCoreLab.GenericRepository\EFCoreLab.GenericRepository.csproj", "{298EB24E-B305-4362-A1C1-DA612F681440}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{79A62B2B-AC83-4DD7-86DF-F1BFCAC69546}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepositoryConsoleApp", "samples\GenericRepositoryConsoleApp\GenericRepositoryConsoleApp.csproj", "{0A4329D4-EE2D-41F7-9634-81EB9D0AF2F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{298EB24E-B305-4362-A1C1-DA612F681440}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{298EB24E-B305-4362-A1C1-DA612F681440}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{298EB24E-B305-4362-A1C1-DA612F681440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4329D4-EE2D-41F7-9634-81EB9D0AF2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4329D4-EE2D-41F7-9634-81EB9D0AF2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4329D4-EE2D-41F7-9634-81EB9D0AF2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4329D4-EE2D-41F7-9634-81EB9D0AF2F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{298EB24E-B305-4362-A1C1-DA612F681440} = {7A025B3A-206E-41E5-ADD2-9FD740D5FE35}
+		{0A4329D4-EE2D-41F7-9634-81EB9D0AF2F4} = {79A62B2B-AC83-4DD7-86DF-F1BFCAC69546}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FFF4FAD6-A6BB-4829-AE53-82EBAE75BBCE}
