@@ -8,8 +8,7 @@ Console.WriteLine("Generic Repository ConsoleApp!");
 var builder = Host.CreateDefaultBuilder(args);
 
 builder.ConfigureServices(services => {
-    //services.AddSingleton<IDbConnectionConfig>();
-    //Load configuration in your way, this is only for this sample app
+    // Load configuration in your way, this is only for this sample app
     services.AddSingleton<IDbConnectionConfig>(serviceProvider =>
     {
         var appConfiguration = new DbConnectionConfig

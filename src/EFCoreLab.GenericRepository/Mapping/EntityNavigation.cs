@@ -1,10 +1,10 @@
 ﻿namespace EFCoreLab.GenericRepository.Mapping;
 
-public class Navigation
+public class EntityNavigation
 {
     public string NavigationName { get; set; }
 
-    public Navigation(string navigationName)
+    public EntityNavigation(string navigationName)
     {
         NavigationName = navigationName;
     }
