@@ -1,5 +1,8 @@
 ﻿using EFCoreLab.GenericRepository;
 using GenericRepositoryConsoleApp;
+using GenericRepositoryConsoleApp.Data;
+using GenericRepositoryConsoleApp.Data.Mapping;
+using GenericRepositoryConsoleApp.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -14,14 +17,47 @@ builder.ConfigureServices(services => {
         var appConfiguration = new DbConnectionConfig
         {
             Host = "localhost",
-            Database = "stock",
-            Username = "username",
+            Database = "efcorelab",
+            Username = "user",
             Password = "password"
         };
         return appConfiguration;
     });
+    services.AddPersonalFrameworkDatabaseRepositoryServices(typeof(ConsoleAppModelMapping));
+    services.AddScoped<StockRepository>();
 });
 
+var host = builder.Build();
 
+var rep = host.Services.GetRequiredService<StockRepository>();
 
+//await AddAsync();
+var stock = GetAsync(2).Result;
+Console.WriteLine($"Found {stock.Name}");
 
+async Task<Stock> AddAsync()
+{
+    var newStock = new Stock
+    {
+        Ticker = "ITSA4",
+        Name = "Itausa",
+    };
+
+    newStock.Sector = new Sector
+    {
+        Name = "Financial"
+    };
+
+    await rep.AddAsync(newStock);
+
+    var getByIdNew = await rep.GetAsync(newStock.Id);
+
+    return getByIdNew;
+}
+
+async Task<Stock> GetAsync(int id)
+{
+    var getById = await rep.GetAsync(id);
+
+    return getById;
+}
