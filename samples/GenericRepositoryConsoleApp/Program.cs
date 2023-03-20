@@ -18,12 +18,12 @@ builder.ConfigureServices(services => {
         {
             Host = "localhost",
             Database = "efcorelab",
-            Username = "user",
-            Password = "password"
+            Username = "mediaibox",
+            Password = "iwannarock"
         };
         return appConfiguration;
     });
-    services.AddPersonalFrameworkDatabaseRepositoryServices(typeof(ConsoleAppModelMapping));
+    services.AddEFCoreDatabaseRepositoryServices(typeof(ConsoleAppModelMapping));
     services.AddScoped<StockRepository>();
 });
 

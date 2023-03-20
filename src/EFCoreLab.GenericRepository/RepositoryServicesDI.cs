@@ -4,7 +4,7 @@ namespace EFCoreLab.GenericRepository;
 
 public static class RepositoryServicesDI
 {
-    public static IServiceCollection AddPersonalFrameworkDatabaseRepositoryServices(this IServiceCollection services, Type modelMapping)
+    public static IServiceCollection AddEFCoreDatabaseRepositoryServices(this IServiceCollection services, Type modelMapping)
     {
         services.AddScoped(typeof(IDbRepository<>), typeof(RepositoryBase<>));
         services.AddSingleton(typeof(IModelMapping), modelMapping);
